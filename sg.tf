@@ -1,4 +1,4 @@
-resource "aws_security_group" "main" {
+resource "aws_security_group" "sgelasticache" {
   name        = "allow_elasticache_redis-${var.COMPONENT}-${var.ENV}"
   description = "allow_elasticache_redis-${var.COMPONENT}-${var.ENV}"
   vpc_id = data.terraform_remote_state.vpc.outputs.VPC_ID
