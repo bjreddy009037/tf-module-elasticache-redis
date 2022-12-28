@@ -4,7 +4,7 @@ resource "aws_security_group" "main" {
   vpc_id = data.terraform_remote_state.vpc.outputs.VPC_ID
 
   ingress {
-    description      = "MYSQL"
+    description      = "REDIS"
     from_port        = 6379
     to_port          = 6379
     protocol         = "tcp"
