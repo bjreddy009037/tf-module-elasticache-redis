@@ -8,12 +8,3 @@ data "terraform_remote_state" "vpc" {
 }
 
 
-data "aws_secretsmanager_secret" "secret" {
-  name = "secret-for-roboshop"
-}
-
-
-data "aws_secretsmanager_secret_version" "secret-version" {
-  secret_id     = data.aws_secretsmanager_secret.secret.id
-
-}
