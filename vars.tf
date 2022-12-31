@@ -1,8 +1,8 @@
-variable "EC_ENGINE" {}
-variable "EC_ENGINE_VERSION" {}
-variable "EC_NODE_TYPE" {}
-variable "EC_NODE_COUNT" {}
-variable "EC_FAMILY" {}
+variable "ENGINE" {}
+variable "ENGINE_VERSION" {}
+variable "NODE_TYPE" {}
+variable "NODE_COUNT" {}
+variable "FAMILY" {}
 variable "ENV" {}
 variable "COMPONENT" {}
 variable "VPC_ID" {}
