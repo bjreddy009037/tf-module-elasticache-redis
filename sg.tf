@@ -1,14 +1,14 @@
-resource "aws_security_group" "sgelasticache" {
+resource "aws_security_group" "main" {
   name        = "allow_elasticache_redis-${var.COMPONENT}-${var.ENV}"
   description = "allow_elasticache_redis-${var.COMPONENT}-${var.ENV}"
-  vpc_id = var.VPC_ID
+  vpc_id      = var.VPC_ID
 
   ingress {
-    description      = "REDIS"
-    from_port        = 6379
-    to_port          = 6379
-    protocol         = "tcp"
-    cidr_blocks      = [var.VPC_CIDR]
+    description = "REDIS"
+    from_port   = 6379
+    to_port     = 6379
+    protocol    = "tcp"
+    cidr_blocks = [var.VPC_CIDR]
 
   }
 
